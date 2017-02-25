@@ -1,0 +1,20 @@
+<server>
+	<featureManager>
+		<feature>microProfile-1.0</feature>
+		<feature>localConnector-1.0</feature>
+		<feature>concurrent-1.0</feature>
+    </featureManager>
+
+	<httpEndpoint httpPort="9080" id="defaultHttpEndpoint"/>
+
+	<!-- Automatically expand WAR files and EAR files -->
+	<applicationManager autoExpand="true"/>
+	<applicationMonitor updateTrigger="mbean"/>
+
+	<logging consoleLogLevel="INFO" />
+
+	<managedThreadFactory jndiName="concurrent/hystrix/threadFactory" />
+
+    <webApplication id="product.backend" location="product.backend.war" name="product.backend"/>
+    <webApplication id="product.service" location="product.service.war" name="product.service"/>
+</server>
