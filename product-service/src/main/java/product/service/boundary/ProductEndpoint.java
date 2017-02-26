@@ -14,6 +14,10 @@ import product.service.model.Product;
 @Path("/products")
 @Produces("application/json")	
 
+/**
+ * REST endpoint to retrieve products using a reactive pattern
+ *
+ */
 @Stateless
 public class ProductEndpoint  {
 	@GET
