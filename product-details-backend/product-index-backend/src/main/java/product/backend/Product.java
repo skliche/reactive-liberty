@@ -1,4 +1,4 @@
-package product.service.model;
+package product.backend;
 
 import java.math.BigDecimal;
 
@@ -13,7 +13,6 @@ public class Product {
 	String name;
 	BigDecimal limit;
 	BigDecimal balance;
-	Recommendation recommendation;
 	
 	public static class BUILDER {
 		String id;
@@ -46,10 +45,5 @@ public class Product {
 			p.balance = balance;
 			return p;
 		}
-	}
-	
-	public Product addRecommendation(Recommendation r) {
-		this.recommendation = r;
-		return this;
 	}
 }
